@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: integration-suite-test-component-git-source-kaog
+  namespace: integration-e2e-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images@sha256:90c1b85149db60f224b11467de40b69c3d0e7389788cbd4d833f97c7cb011c7f
+        name: my-python
+        resources: {}
+status: {}
